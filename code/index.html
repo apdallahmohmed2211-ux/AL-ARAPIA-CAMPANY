@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-ARABIA COMPANY | العربية للتشطيبات والديكور والتصميم المعماري</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #070a10; color: #f3f4f6; }
+        .en-mode { font-family: 'Poppins', 'Cairo', sans-serif; }
+        .gold-text { color: #d4af37; }
+        .gold-bg { background-color: #d4af37; }
+        .gold-border { border-color: #d4af37; }
+        .glass-card { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(14px); border: 1px solid rgba(212, 175, 55, 0.3); }
+        .glass-card:hover { border-color: rgba(212, 175, 55, 0.8); transform: translateY(-4px); }
+        .hero-overlay { background: linear-gradient(180deg, rgba(7, 10, 16, 0.75) 0%, rgba(7, 10, 16, 0.95) 100%); }
+    </style>
+</head>
+<body class="bg-[#070a10] text-gray-100 min-h-screen flex flex-col selection:bg-yellow-500 selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="bg-[#070a10]/95 backdrop-blur-md border-b border-yellow-600/30 py-3 px-6 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Company Logo & Brand -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-12 h-12 rounded-xl border border-yellow-500/50 p-1 bg-black/80 flex items-center justify-center shadow-lg overflow-hidden shrink-0">
+                    <!-- الصورة الأصلية المرفقة -->
+                    <img src="logo.jpg" alt="AL-ARABIA Logo" class="w-full h-full object-contain" onerror="this.onerror=null; this.remove(); document.getElementById('svg-logo').classList.remove('hidden');">
+                    <!-- SVG احتياطي في حالة عدم تحميل الملف -->
+                    <svg id="svg-logo" class="w-full h-full hidden" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 12L22 75H36L50 42L64 75H78L50 12Z" fill="url(#goldGrad)"/>
+                        <path d="M28 68C38 56 62 56 72 68" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>
+                        <rect x="42" y="24" width="16" height="32" fill="#9a7b2c" opacity="0.85"/>
+                        <defs>
+                            <linearGradient id="goldGrad" x1="20" y1="12" x2="80" y2="75" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F5E7B2"/><stop offset="0.5" stop-color="#D4AF37"/><stop offset="1" stop-color="#A57A18"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-black tracking-wide gold-text leading-tight">AL-ARABIA COMPANY</h1>
+                    <p class="text-[10px] text-gray-400 tracking-wider uppercase" data-ar="التشطيبات • المقاولات • الاستثمار العقاري" data-en="FINISHES • CONTRACTING • REAL ESTATE">التشطيبات • المقاولات • الاستثمار العقاري</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse text-sm font-semibold">
+                <a href="#hero" class="hover:text-yellow-400 transition" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#process" class="hover:text-yellow-400 transition" data-ar="رحلة التشطيب" data-en="Our Process">رحلة التشطيب</a>
+                <a href="#design3d" class="hover:text-yellow-400 transition" data-ar="التصميم 3D" data-en="3D Design">التصميم 3D</a>
+                <a href="#halls-video" class="hover:text-yellow-400 transition" data-ar="قاعات الأفراح" data-en="Wedding Halls">قاعات الأفراح</a>
+                <a href="#villas-ref" class="hover:text-yellow-400 transition" data-ar="تشطيب الفلل والفرش" data-en="Villas & Furnishing">تشطيب الفلل والفرش</a>
+                <a href="#packages" class="hover:text-yellow-400 transition" data-ar="الباقات 2026" data-en="Packages 2026">الباقات 2026</a>
+                <a href="#calculator" class="hover:text-yellow-400 transition" data-ar="الحاسبة" data-en="Calculator">الحاسبة</a>
+                <a href="#contact" class="hover:text-yellow-400 transition" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+            </nav>
+
+            <!-- Language and Action Buttons -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button onclick="toggleLanguage()" class="px-3.5 py-1.5 text-xs font-bold border gold-border gold-text rounded-full hover:bg-yellow-500 hover:text-black transition shadow-md">
+                    <i class="fa-solid fa-globe ml-1"></i> <span id="lang-btn">English</span>
+                </button>
+                <a href="#appointment" class="hidden sm:inline-block gold-bg text-black font-bold text-xs px-4 py-2.5 rounded-xl shadow-md hover:bg-yellow-400 transition" data-ar="حجز موعد معاينة" data-en="Book Visit">حجز موعد معاينة</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Luxury Hero Section with Video Background -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-30" autoplay loop muted playsinline>
+            <source src="Generate_a_10_second_scen...remium_cinematic_lighting.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+
+        <div class="max-w-5xl mx-auto relative z-20 text-center px-6 py-20">
+            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-yellow-500/20 gold-text border border-yellow-500/50 mb-6 backdrop-blur-md" data-ar="🏆 العربية للتشطيبات والتصميم المعماري الفاخر" data-en="🏆 Al-Arabia for Luxury Finishing & Architecture">
+                🏆 العربية للتشطيبات والتصميم المعماري الفاخر
+            </span>
+            <h2 class="text-4xl sm:text-7xl font-black mb-6 text-white leading-tight" data-ar="نصمم وننفذ مساحتك <br><span class='gold-text'>بأرقى المعايير العالمية</span>" data-en="We Design & Execute Your Space <br><span class='gold-text'>With World-Class Luxury</span>">
+                نصمم وننفذ مساحتك <br><span class="gold-text">بأرقى المعايير العالمية</span>
+            </h2>
+            <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light" data-ar="نقدم خدمات التصميم الـ 3D قبل التنفيذ، وتشطيب الشقق، الفلل الملكية، وتجهيز قاعات الأفراح والمؤتمرات بأعلى خامات 2026." data-en="We provide 3D designs prior to execution, finishing for luxury apartments, royal villas, and wedding halls with top 2026 materials.">
+                نقدم خدمات التصميم الـ 3D قبل التنفيذ، وتشطيب الشقق، الفلل الملكية، وتجهيز قاعات الأفراح والمؤتمرات بأعلى خامات 2026.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/201129833850" target="_blank" class="bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-emerald-500 transition flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> <span data-ar="تواصل واتساب فوراً" data-en="WhatsApp Us Now">تواصل واتساب فوراً</span>
+                </a>
+                <a href="#calculator" class="gold-bg text-black font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-yellow-400 transition flex items-center justify-center text-sm" data-ar="حساب تكلفة مشروعك" data-en="Calculate Cost">
+                    حساب تكلفة مشروعك
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section (خطوات التشطيب خطوة بخطوة) -->
+    <section id="process" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl sm:text-4xl font-black gold-text mb-3" data-ar="رحلة التشطيب معنا (خطوة بخطوة)" data-en="Our Finishing Process (Step by Step)">رحلة التشطيب معنا (خطوة بخطوة)</h3>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto" data-ar="شفافية كاملة وخطوات منظمة من أول تواصل حتى تسليم المفتاح" data-en="Complete transparency and organized steps from initial contact to key delivery">شفافية كاملة وخطوات منظمة من أول تواصل حتى تسليم المفتاح</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div class="glass-card p-6 rounded-2xl text-center relative">
+                <div class="w-12 h-12 gold-bg text-black font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+                <h4 class="font-bold text-white mb-2" data-ar="إرسال البيانات" data-en="Send Data">إرسال البيانات</h4>
+                <p class="text-xs text-gray-400" data-ar="تبعت لنا مساحة وحدتك، موقعها، ورؤيتك المبدئية للمشروع." data-en="Share space area, location, and initial vision with us.">تبعت لنا مساحة وحدتك، موقعها، ورؤيتك المبدئية للمشروع.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center relative">
+                <div class="w-12 h-12 gold-bg text-black font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+                <h4 class="font-bold text-white mb-2" data-ar="المعاينة الفنية" data-en="Site Inspection">المعاينة الفنية</h4>
+                <p class="text-xs text-gray-400" data-ar="ينزل مهندس متخصص لرفع المقاسات وفحص حالة المكان." data-en="A specialized engineer measures and inspects the site.">ينزل مهندس متخصص لرفع المقاسات وفحص حالة المكان.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center relative">
+                <div class="w-12 h-12 gold-bg text-black font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+                <h4 class="font-bold text-white mb-2" data-ar="التصميم الـ 3D" data-en="3D Design">التصميم الـ 3D</h4>
+                <p class="text-xs text-gray-400" data-ar="نعمل لك تصميمات 3D كاملة تشوف بيها كل ركن قبل التنفيذ." data-en="We create full 3D designs to preview every corner.">نعمل لك تصميمات 3D كاملة تشوف بيها كل ركن قبل التنفيذ.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center relative">
+                <div class="w-12 h-12 gold-bg text-black font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+                <h4 class="font-bold text-white mb-2" data-ar="اعتماد المقايسة" data-en="BOQ & Agreement">اعتماد المقايسة</h4>
+                <p class="text-xs text-gray-400" data-ar="نحدد نوع الخامات، جدول المواعيد، وتكلفة الفينش بالضبط." data-en="We finalize materials, timeline, and exact budget.">نحدد نوع الخامات، جدول المواعيد، وتكلفة الفينش بالضبط.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center relative">
+                <div class="w-12 h-12 gold-bg text-black font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">5</div>
+                <h4 class="font-bold text-white mb-2" data-ar="التنفيذ والتسليم" data-en="Execution & Delivery">التنفيذ والتسليم</h4>
+                <p class="text-xs text-gray-400" data-ar="بدء الأعمال الهندسية والاستلام تسليم مفتاح بالمطابقة." data-en="Engineering work starts, leading to turnkey delivery.">بدء الأعمال الهندسية والاستلام تسليم مفتاح بالمطابقة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Design Feature Section (التصميم قبل التنفيذ) -->
+    <section id="design3d" class="py-20 px-6 max-w-7xl mx-auto bg-[#0b101d] border-y border-yellow-600/20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase mb-4 inline-block" data-ar="ميزة التصميم المعماري" data-en="Architectural Design Feature">ميزة التصميم المعماري</span>
+                <h3 class="text-3xl sm:text-4xl font-black gold-text mb-6" data-ar="تصاميم 3D واقعية قبل بدء أي حفر أو تنفيذ" data-en="Realistic 3D Designs Before Any Execution">تصاميم 3D واقعية قبل بدء أي حفر أو تنفيذ</h3>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed" data-ar="في الشركة العربية، نضمن لك رؤية مشروعك كأنك تدخله بالفعل عبر أفضل برامج الريندر والتصميم المعماري، مما يلغي التكهنات ويضمن مطابقة التنفيذ للتصميم 100%." data-en="At Al-Arabia Company, we ensure you visualize your project vividly through top rendering tools, ensuring 100% execution match with zero guesswork.">
+                    في الشركة العربية، نضمن لك رؤية مشروعك كأنك تدخله بالفعل عبر أفضل برامج الريندر والتصميم المعماري، مما يلغي التكهنات ويضمن مطابقة التنفيذ للتصميم 100%.
+                </p>
+                <ul class="text-xs text-gray-400 space-y-3 mb-8">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check gold-text"></i> <span data-ar="توزيع الإضاءة والأثاث والفرش بدقة ملليمترية." data-en="Precise lighting, furniture, and layout distribution.">توزيع الإضاءة والأثاث والفرش بدقة ملليمترية.</span></li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check gold-text"></i> <span data-ar="اختيار ألوان الدهانات والرخام والتجاليد الخشبية مسبقاً." data-en="Pre-selection of paint colors, marble, and wood claddings.">اختيار ألوان الدهانات والرخام والتجاليد الخشبية مسبقاً.</span></li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check gold-text"></i> <span data-ar="تعديل أي تفاصيل بمرونة قبل شراء الخامات." data-en="Flexible modifications prior to purchasing materials.">تعديل أي تفاصيل بمرونة قبل شراء الخامات.</span></li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" class="rounded-2xl shadow-xl border border-yellow-500/30 object-cover h-64 w-full" alt="3D Interior Design">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" class="rounded-2xl shadow-xl border border-yellow-500/30 object-cover h-64 w-full mt-8" alt="3D Modern Living Room">
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Halls Video Showcase Section -->
+    <section id="halls-video" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-black gold-text mb-3" data-ar="فيديوهات ورخص قاعات الأفراح الفاخرة" data-en="Luxury Wedding Halls Videos & References">فيديوهات ورخص قاعات الأفراح الفاخرة</h3>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto" data-ar="شاهد استعراض حي وتصاميم الهياكل المعدنية والإضاءة لقاعات الأفراح والمناسبات" data-en="Watch live walkthroughs of steel structures and lighting for grand ballrooms">شاهد استعراض حي وتصاميم الهياكل المعدنية والإضاءة لقاعات الأفراح والمناسبات</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <!-- Video Container -->
+            <div class="glass-card rounded-3xl overflow-hidden p-3 border-yellow-500/50">
+                <div class="aspect-video w-full rounded-2xl overflow-hidden relative bg-black">
+                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline>
+                        <source src="Generate_a_10_second_scen...remium_cinematic_lighting.mp4" type="video/mp4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Wedding Hall Design" frameborder="0" allowfullscreen></iframe>
+                    </video>
+                </div>
+            </div>
+            <!-- Details -->
+            <div class="space-y-4">
+                <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="تجهيزات VIP" data-en="VIP Setup">تجهيزات VIP</span>
+                <h4 class="text-2xl font-bold text-white" data-ar="تأسيس وتجهيز قاعات الأفراح من الهيكل حتى النجف" data-en="Complete Ballroom Construction & Furnishing">تأسيس وتجهيز قاعات الأفراح من الهيكل حتى النجف</h4>
+                <p class="text-gray-300 text-sm leading-relaxed" data-ar="نمتلك الخبرة في تصميم قاعات الأفراح، توزيع أنظمة الإضاءة المسرحية، الصوتيات المعتمدة، العزل الصوتي الجداري، والأرضيات الرخامية اللامعة." data-en="We specialize in grand ballroom design, stage lighting distribution, acoustic insulation, and glossy marble flooring.">
+                    نمتلك الخبرة في تصميم قاعات الأفراح، توزيع أنظمة الإضاءة المسرحية، الصوتيات المعتمدة، العزل الصوتي الجداري، والأرضيات الرخامية اللامعة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villas & Furnishing Video References Section -->
+    <section id="villas-ref" class="py-20 px-6 max-w-7xl mx-auto bg-[#0b101d] border-t border-yellow-600/20">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl sm:text-4xl font-black gold-text mb-3" data-ar="معرض الفلل، الفرش، والتجاليد الفاخرة" data-en="Villas, Furnishing & Wall Cladding Showcase">معرض الفلل، الفرش، والتجاليد الفاخرة</h3>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto" data-ar="مجموعة بصرية غنية لأرقى التشطيبات والفرش الداخلي والديكورات" data-en="A rich visual collection of luxury finishes, interior furniture, and decorations">مجموعة بصرية غنية لأرقى التشطيبات والفرش الداخلي والديكورات</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group relative rounded-2xl overflow-hidden shadow-2xl border border-yellow-600/20 bg-[#111827]">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="تشطيب فيلا" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                <div class="p-6">
+                    <span class="text-[10px] font-bold gold-bg text-black px-2.5 py-0.5 rounded-full mb-2 inline-block" data-ar="تشطيب فلل" data-en="Villa Finishes">تشطيب فلل</span>
+                    <h4 class="text-lg font-bold text-white mb-1" data-ar="فيلا مودرن بالتجمع الخامس" data-en="Modern Villa - New Cairo">فيلا مودرن بالتجمع الخامس</h4>
+                    <p class="text-xs text-gray-300" data-ar="رخام إيطالي، إضاءة مخفية، وتجاليد خشبية." data-en="Italian marble, cove lighting, and wood cladding.">رخام إيطالي، إضاءة مخفية، وتجاليد خشبية.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-2xl border border-yellow-600/20 bg-[#111827]">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="فرش وديكور" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                <div class="p-6">
+                    <span class="text-[10px] font-bold gold-bg text-black px-2.5 py-0.5 rounded-full mb-2 inline-block" data-ar="الفرش والديكور" data-en="Furnishing & Decor">الفرش والديكور</span>
+                    <h4 class="text-lg font-bold text-white mb-1" data-ar="تنسيق الفرش والأثاث الفاخر" data-en="Luxury Furniture Coordination">تنسيق الفرش والأثاث الفاخر</h4>
+                    <p class="text-xs text-gray-300" data-ar="اختيار قطع الأثاث المودرن المتناسقة مع الألوان." data-en="Selection of modern furniture matching interior colors.">اختيار قطع الأثاث المودرن المتناسقة مع الألوان.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl overflow-hidden shadow-2xl border border-yellow-600/20 bg-[#111827]">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="قاعات ومؤتمرات" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                <div class="p-6">
+                    <span class="text-[10px] font-bold gold-bg text-black px-2.5 py-0.5 rounded-full mb-2 inline-block" data-ar="المجلس والريسبشن" data-en="Majlis & Reception">المجلس والريسبشن</span>
+                    <h4 class="text-lg font-bold text-white mb-1" data-ar="تشطيب الريسبشنات الملوكية" data-en="Royal Reception Finishing">تشطيب الريسبشنات الملوكية</h4>
+                    <p class="text-xs text-gray-300" data-ar="أسقف جبس بورد، بيت نور، ونجف مودرن ثقيل." data-en="Gypsum board ceilings, cove lights, & heavy chandeliers.">أسقف جبس بورد، بيت نور، ونجف مودرن ثقيل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section 2026 -->
+    <section id="packages" class="py-20 px-6 max-w-7xl mx-auto border-t border-yellow-600/20">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl sm:text-4xl font-black gold-text mb-3" data-ar="أسعار وباقات التشطيب 2026 في مصر" data-en="Finishing Packages & Prices 2026 (Egypt)">أسعار وباقات التشطيب 2026 في مصر</h3>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto" data-ar="حصر شمل الشقق، الفلل، وقاعات الأفراح والمؤتمرات لعام 2026" data-en="Comprehensive packages for apartments, villas, and wedding halls in 2026">حصر شمل الشقق، الفلل، وقاعات الأفراح والمؤتمرات لعام 2026</p>
+        </div>
+
+        <!-- Apartments -->
+        <div class="mb-16">
+            <h4 class="text-2xl font-bold text-white mb-6 border-r-4 border-yellow-500 pr-3 flex items-center gap-2">
+                <i class="fa-solid fa-building text-yellow-500"></i> <span data-ar="باقات تشطيب الشقق السكنية" data-en="Residential Apartment Packages">باقات تشطيب الشقق السكنية</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="اقتصادي راقي" data-en="Standard Lux">اقتصادي راقي</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="باقة لوكس (Lux)" data-en="Lux Package">باقة لوكس (Lux)</h5>
+                    <p class="text-3xl font-black gold-text my-3">5,500 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="تأسيس سباكة وكهرباء فرز أول، سيراميك الجوهرة/كليوباترا، ودهانات جوتن." data-en="First-rate plumbing/electrical, Cleopatra/Gawhara ceramics, & Jotun paints.">تأسيس سباكة وكهرباء فرز أول، سيراميك الجوهرة/كليوباترا، ودهانات جوتن.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border-yellow-500/70">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="باقة سوبر لوكس" data-en="Super Lux Package">باقة سوبر لوكس</h5>
+                    <p class="text-3xl font-black gold-text my-3">8,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="بورسلين فاخر، أسقف بيت نور بالكامل، أطقم صحية مستوردة ضمان 10 سنوات." data-en="Porcelain floors, full gypsum cove lighting, imported sanitary fittings.">بورسلين فاخر، أسقف بيت نور بالكامل، أطقم صحية مستوردة ضمان 10 سنوات.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="VIP فاخر" data-en="Ultra VIP">VIP فاخر</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="باقة ألترا VIP" data-en="Ultra VIP Package">باقة ألترا VIP</h5>
+                    <p class="text-3xl font-black gold-text my-3">12,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="رخام مستورد، أنظمة سمارت هوم، تكييفات كونسيلد، وتجاليد خشبية." data-en="Imported marble, Smart Home automation, concealed AC, & wood wall panels.">رخام مستورد، أنظمة سمارت هوم، تكييفات كونسيلد، وتجاليد خشبية.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Villas -->
+        <div class="mb-16">
+            <h4 class="text-2xl font-bold text-white mb-6 border-r-4 border-yellow-500 pr-3 flex items-center gap-2">
+                <i class="fa-solid fa-house-chimney text-yellow-500"></i> <span data-ar="باقات تشطيب الفلل والقصور" data-en="Villa & Palace Packages">باقات تشطيب الفلل والقصور</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="فيلا مودرن" data-en="Modern Villa">فيلا مودرن</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="سوبر لوكس للفلل" data-en="Villa Super Lux">سوبر لوكس للفلل</h5>
+                    <p class="text-3xl font-black gold-text my-3">9,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="تشطيب كامل داخلي وخارجي وحمامات سباحة أساسية." data-en="Full interior/exterior finishing plus basic pool installation.">تشطيب كامل داخلي وخارجي وحمامات سباحة أساسية.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="فيلا فاخرة" data-en="Luxury Villa">فيلا فاخرة</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="ألترا لوكس للفلل" data-en="Villa Ultra Lux">ألترا لوكس للفلل</h5>
+                    <p class="text-3xl font-black gold-text my-3">14,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="رخام إيطالي، واجهات زجاجية مزدوجة، ولاندسكيب كامل." data-en="Italian marble, double glazed facades, and complete landscaping.">رخام إيطالي، واجهات زجاجية مزدوجة، ولاندسكيب كامل.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="ملكي VIP" data-en="Royal VIP">ملكي VIP</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="باقة القصور الملكية" data-en="Royal Palace Package">باقة القصور الملكية</h5>
+                    <p class="text-3xl font-black gold-text my-3">18,000+ <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="حمامات سباحة أنفنتي، خامات مستوردة خاصة، وأعلى أمان." data-en="Infinity pools, custom imported materials, & ultimate security.">حمامات سباحة أنفنتي، خامات مستوردة خاصة، وأعلى أمان.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halls -->
+        <div>
+            <h4 class="text-2xl font-bold text-white mb-6 border-r-4 border-yellow-500 pr-3 flex items-center gap-2">
+                <i class="fa-solid fa-champagne-glasses text-yellow-500"></i> <span data-ar="باقات قاعات الأفراح والمؤتمرات" data-en="Wedding Halls & Conference Packages">باقات قاعات الأفراح والمؤتمرات</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="قاعات اجتماعات" data-en="Conference Halls">قاعات اجتماعات</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="باقة قاعات المؤتمرات" data-en="Conference Package">باقة قاعات المؤتمرات</h5>
+                    <p class="text-3xl font-black gold-text my-3">15,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="عزل صوتي، إضاءة مسارح، وشاشات عرض متطورة." data-en="Acoustic soundproofing, stage lighting, and display screens.">عزل صوتي، إضاءة مسارح، وشاشات عرض متطورة.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border-yellow-500/60">
+                    <span class="text-xs font-bold gold-bg text-black px-3 py-1 rounded-full uppercase" data-ar="قاعات أفراح VIP" data-en="Royal Ballroom VIP">قاعات أفراح VIP</span>
+                    <h5 class="text-xl font-bold text-white mt-4 mb-2" data-ar="الباقة الملوكية لقاعات الأفراح" data-en="Royal Wedding Hall Package">الباقة الملوكية لقاعات الأفراح</h5>
+                    <p class="text-3xl font-black gold-text my-3">22,000 <span class="text-sm font-normal text-gray-300" data-ar="ج.م / م²" data-en="EGP / m²">ج.م / م²</span></p>
+                    <p class="text-xs text-gray-400" data-ar="تجهيز النجف الثقيل، الممشى المضيء، والتكييف المركزي." data-en="Heavy chandeliers, illuminated runway, & central HVAC setup.">تجهيز النجف الثقيل، الممشى المضيء، والتكييف المركزي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Calculator Section -->
+    <section id="calculator" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="glass-card p-8 sm:p-12 rounded-3xl">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-black gold-text mb-2" data-ar="حاسبة التكلفة التقديرية 2026" data-en="Dynamic Cost Calculator 2026">حاسبة التكلفة التقديرية 2026</h3>
+                <p class="text-gray-400 text-sm" data-ar="اختر نوع مشروعك والمساحة للحصول على التكلفة فوراً" data-en="Select project type and area to calculate instantly">اختر نوع مشروعك والمساحة للحصول على التكلفة فوراً</p>
+            </div>
+
+            <form id="calcForm" onsubmit="event.preventDefault(); calculateCost();" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold mb-2" data-ar="نوع المشروع:" data-en="Project Type:">نوع المشروع:</label>
+                    <select id="propType" onchange="updateOptions()" class="w-full bg-[#070a10] border border-yellow-600/40 rounded-xl px-4 py-3.5 text-gray-100 focus:outline-none focus:border-yellow-400">
+                        <option value="apartment" data-ar="شقة سكنية" data-en="Residential Apartment">شقة سكنية</option>
+                        <option value="villa" data-ar="فيلا / قصر" data-en="Villa / Palace">فيلا / قصر</option>
+                        <option value="hall" data-ar="قاعة أفراح / مؤتمرات" data-en="Wedding / Conference Hall">قاعة أفراح / مؤتمرات</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2" data-ar="الباقة المستهدفة:" data-en="Target Package:">الباقة المستهدفة:</label>
+                    <select id="pkgType" class="w-full bg-[#070a10] border border-yellow-600/40 rounded-xl px-4 py-3.5 text-gray-100 focus:outline-none focus:border-yellow-400">
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2" data-ar="المساحة بالمتر المربع:" data-en="Area (Sq Meters):">المساحة بالمتر المربع:</label>
+                    <input type="number" id="areaInput" placeholder="150" required class="w-full bg-[#070a10] border border-yellow-600/40 rounded-xl px-4 py-3.5 text-gray-100 focus:outline-none focus:border-yellow-400">
+                </div>
+
+                <button type="submit" class="w-full gold-bg text-black font-black py-4 rounded-xl hover:bg-yellow-400 transition text-base shadow-lg" data-ar="احسب التكلفة الآن" data-en="Calculate Now">
+                    احسب التكلفة الآن
+                </button>
+            </form>
+
+            <div id="calcResult" class="hidden mt-8 p-6 bg-black/70 border border-yellow-500/50 rounded-2xl text-center">
+                <span class="text-xs text-gray-400 block mb-1" data-ar="إجمالي التكلفة التقديرية:" data-en="Total Estimated Cost:">إجمالي التكلفة التقديرية:</span>
+                <span class="text-4xl font-black gold-text" id="costOutput">0</span> <span class="gold-text font-bold" data-ar="جنيه مصري" data-en="EGP">جنيه مصري</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-3xl font-black gold-text mb-6" data-ar="مقر الشركة وتفاصيل الاتصال" data-en="Headquarters & Contact Details">مقر الشركة وتفاصيل الاتصال</h3>
+                <p class="text-gray-300 text-sm mb-8 leading-relaxed" data-ar="يشرفنا زيارتكم لمقر الشركة لمناقشة التفاصيل الهندسية وعمل المعاينات." data-en="We welcome your visit to discuss engineering details and inspection dates.">
+                    يشرفنا زيارتكم لمقر الشركة لمناقشة التفاصيل الهندسية وعمل المعاينات.
+                </p>
+
+                <div class="space-y-5 mb-8">
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="w-11 h-11 rounded-xl gold-bg/10 gold-text flex items-center justify-center shrink-0 border border-yellow-600/30">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm text-gray-200" data-ar="العنوان الرئيسي" data-en="Main Address">العنوان الرئيسي</h5>
+                            <p class="text-xs text-gray-400 mt-1 leading-normal" data-ar="برج الحجاز جراند بلازا - الدور الثامن - شارع الخمسين - زهراء المعادي، القاهرة." data-en="El-Hegaz Grand Plaza Tower - 8th Floor - 50th St - Zahraa El Maadi, Cairo.">
+                                برج الحجاز جراند بلازا - الدور الثامن - شارع الخمسين - زهراء المعادي، القاهرة.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <div class="w-11 h-11 rounded-xl gold-bg/10 gold-text flex items-center justify-center shrink-0 border border-yellow-600/30">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm text-gray-200" data-ar="أرقام التواصل" data-en="Phone Numbers">أرقام التواصل</h5>
+                            <p class="text-xs text-gray-400 mt-1 dir-ltr text-right">
+                                <a href="tel:01129833850" class="hover:text-yellow-400 font-mono">01129833850</a> | 
+                                <a href="tel:01028313720" class="hover:text-yellow-400 font-mono">01028313720</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://maps.google.com/?q=Zahraa+Al+Maadi+Khamsseen+Street+Cairo" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 border gold-border gold-text rounded-xl hover:bg-yellow-500 hover:text-black transition text-sm font-bold shadow-lg">
+                    <i class="fa-solid fa-map-location-dot"></i> <span data-ar="خرائط جوجل" data-en="Google Maps">موقع الشركة على خرائط جوجل</span>
+                </a>
+            </div>
+
+            <!-- Booking Form -->
+            <div id="appointment" class="glass-card p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold gold-text mb-6" data-ar="حجز موعد زيارة ومعاينة" data-en="Book Inspection Visit">حجز موعد زيارة ومعاينة</h4>
+                <form onsubmit="event.preventDefault(); alert(currentLang === 'ar' ? 'تم استلام طلبك بنجاح، وسيتواصل معك مهندس العلاقات العامة قريباً.' : 'Request received successfully, our engineer will contact you soon.');" class="space-y-4">
+                    <div>
+                        <input type="text" placeholder="الاسم بالكامل" data-ar-ph="الاسم بالكامل" data-en-ph="Full Name" required class="w-full bg-[#070a10] border border-yellow-600/30 rounded-xl px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="رقم الهاتف" data-ar-ph="رقم الهاتف" data-en-ph="Phone Number" required class="w-full bg-[#070a10] border border-yellow-600/30 rounded-xl px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <select class="w-full bg-[#070a10] border border-yellow-600/30 rounded-xl px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-yellow-400">
+                            <option value="hall" data-ar="تجهيز قاعة أفراح / مؤتمرات" data-en="Wedding Ballroom Finishing">تجهيز قاعة أفراح / مؤتمرات</option>
+                            <option value="villa" data-ar="تشطيب فيلا سكنية" data-en="Villa Finishing">تشطيب فيلا سكنية</option>
+                            <option value="apartment" data-ar="تشطيب شقة سكنية" data-en="Apartment Finishing">تشطيب شقة سكنية</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea rows="3" placeholder="تفاصيل الطلب والموعد المقترح..." data-ar-ph="تفاصيل الطلب والموعد المقترح..." data-en-ph="Project details & proposed date..." class="w-full bg-[#070a10] border border-yellow-600/30 rounded-xl px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-yellow-400"></textarea>
+                    </div>
+                    <button type="submit" class="w-full gold-bg text-black font-bold py-3.5 rounded-xl hover:bg-yellow-400 transition text-sm shadow-md" data-ar="تأكيد حجز الموعد" data-en="Confirm Booking">
+                        تأكيد حجز الموعد
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201129833850" target="_blank" class="fixed bottom-6 left-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-[#04060a] text-center py-8 border-t border-yellow-600/20 text-xs text-gray-500 mt-auto">
+        <p data-ar="جميع الحقوق محفوظة © 2026 الشركة العربية للمقاولات والتشطيبات والاستثمار العقاري." data-en="All Rights Reserved © 2026 Al-Arabia Company for Finishes & Real Estate.">جميع الحقوق محفوظة © 2026 الشركة العربية للمقاولات والتشطيبات والاستثمار العقاري.</p>
+    </footer>
+
+    <!-- Full Bilingual & Dynamic Script -->
+    <script>
+        let currentLang = 'ar';
+
+        const packageData = {
+            apartment: [
+                { ar: 'باقة لوكس (5,500 ج/م²)', en: 'Lux Package (5,500 EGP/m²)', rate: 5500 },
+                { ar: 'باقة سوبر لوكس (8,000 ج/م²)', en: 'Super Lux Package (8,000 EGP/m²)', rate: 8000 },
+                { ar: 'باقة ألترا VIP (12,000 ج/م²)', en: 'Ultra VIP Package (12,000 EGP/m²)', rate: 12000 }
+            ],
+            villa: [
+                { ar: 'فيلا سوبر لوكس (9,000 ج/م²)', en: 'Villa Super Lux (9,000 EGP/m²)', rate: 9000 },
+                { ar: 'فيلا ألترا لوكس (14,000 ج/م²)', en: 'Villa Ultra Lux (14,000 EGP/m²)', rate: 14000 },
+                { ar: 'قصور وتصاميم ملكية (18,000 ج/م²)', en: 'Royal Palace VIP (18,000 EGP/m²)', rate: 18000 }
+            ],
+            hall: [
+                { ar: 'قاعات مؤتمرات فاخرة (15,000 ج/م²)', en: 'Conference Hall (15,000 EGP/m²)', rate: 15000 },
+                { ar: 'قاعات أفراح ملوكية (22,000 ج/م²)', en: 'Royal Wedding Ballroom (22,000 EGP/m²)', rate: 22000 }
+            ]
+        };
+
+        function updateOptions() {
+            const propType = document.getElementById('propType').value;
+            const pkgSelect = document.getElementById('pkgType');
+            pkgSelect.innerHTML = '';
+
+            packageData[propType].forEach(pkg => {
+                const opt = document.createElement('option');
+                opt.value = pkg.rate;
+                opt.innerText = currentLang === 'ar' ? pkg.ar : pkg.en;
+                pkgSelect.appendChild(opt);
+            });
+        }
+
+        function calculateCost() {
+            const area = parseFloat(document.getElementById('areaInput').value);
+            const rate = parseFloat(document.getElementById('pkgType').value);
+            if (!area || area <= 0) return;
+
+            const total = area * rate;
+            document.getElementById('costOutput').innerText = total.toLocaleString();
+            document.getElementById('calcResult').classList.remove('hidden');
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.body.classList.toggle('en-mode', currentLang === 'en');
+            document.getElementById('lang-btn').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+
+            // Translate Text Elements
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}`);
+                if (text) el.innerHTML = text;
+            });
+
+            // Translate Placeholders
+            document.querySelectorAll('[data-ar-ph]').forEach(el => {
+                const ph = el.getAttribute(`data-${currentLang}-ph`);
+                if (ph) el.placeholder = ph;
+            });
+
+            updateOptions();
+        }
+
+        window.onload = updateOptions;
+    </script>
+</body>
+</html>
